@@ -16,7 +16,7 @@ const BBSHeader = () => {
           {currentTime.toLocaleTimeString()}
         </span>
       </div>
-      <div className="p-6 text-center">
+      <div className="p-4 md:p-6 text-center">
         <div className="ascii-title text-2xl md:text-3xl mb-2">
           ╔══════════════════════════════════════════════╗
         </div>
