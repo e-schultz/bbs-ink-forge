@@ -1,97 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=SF+Mono:ital,wght@0,400;0,500;0,600;1,400&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
-
+/* BBS Publishing Collective Design System */
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
-    --radius: 0.5rem;
-
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Terminal/BBS Color Palette */
+    --terminal-bg: 230 15% 3%;
+    --terminal-surface: 230 12% 6%;
+    --terminal-elevated: 230 10% 9%;
+    
+    --terminal-text: 180 5% 90%;
+    --terminal-text-dim: 180 3% 65%;
+    --terminal-text-bright: 180 8% 98%;
+    
+    --cyan-primary: 180 100% 50%;
+    --cyan-secondary: 180 80% 40%;
+    --green-terminal: 120 100% 50%;
+    --amber-accent: 45 100% 60%;
+    --magenta-error: 300 100% 50%;
+    
+    --terminal-border: 180 50% 30%;
+    --terminal-glow: 180 100% 50%;
+    
+    /* Core Design System */
+    --background: var(--terminal-bg);
+    --foreground: var(--terminal-text);
+    
+    --card: var(--terminal-surface);
+    --card-foreground: var(--terminal-text);
+    
+    --popover: var(--terminal-elevated);
+    --popover-foreground: var(--terminal-text);
+    
+    --primary: var(--cyan-primary);
+    --primary-foreground: var(--terminal-bg);
+    
+    --secondary: var(--terminal-elevated);
+    --secondary-foreground: var(--terminal-text);
+    
+    --muted: var(--terminal-surface);
+    --muted-foreground: var(--terminal-text-dim);
+    
+    --accent: var(--green-terminal);
+    --accent-foreground: var(--terminal-bg);
+    
+    --destructive: var(--magenta-error);
+    --destructive-foreground: var(--terminal-text-bright);
+    
+    --border: var(--terminal-border);
+    --input: var(--terminal-elevated);
+    --ring: var(--cyan-primary);
+    
+    --radius: 0rem;
+    
+    /* Terminal Effects */
+    --glow-intensity: 0.3;
+    --scan-line-opacity: 0.1;
+    --flicker-intensity: 0.02;
   }
+}
 
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+@layer base {
+  * {
+    @apply border-border;
   }
+  
+  body {
+    @apply bg-background text-foreground font-mono;
+    font-family: 'SF Mono', 'Monaco', 'Cascadia Code', 'Roboto Mono', monospace;
+    background-image: 
+      repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        rgba(0, 255, 255, var(--scan-line-opacity)) 2px,
+        rgba(0, 255, 255, var(--scan-line-opacity)) 4px
+      );
+    animation: subtle-flicker 0.15s linear infinite alternate;
+  }
+  
+  /* Terminal Window Aesthetics */
+  .terminal-window {
+    @apply border border-primary/30 bg-card/80 backdrop-blur-sm;
+    box-shadow: 
+      0 0 20px rgba(0, 255, 255, var(--glow-intensity)),
+      inset 0 1px 0 rgba(0, 255, 255, 0.1);
+  }
+  
+  .terminal-header {
+    @apply border-b border-primary/30 px-4 py-2 bg-muted/50;
+    @apply flex items-center gap-2 text-sm text-muted-foreground;
+  }
+  
+  .terminal-header::before {
+    content: "●●●";
+    @apply text-primary text-xs;
+  }
+  
+  /* ASCII Art Typography */
+  .ascii-title {
+    font-family: 'SF Mono', monospace;
+    @apply text-primary font-normal tracking-wide;
+    text-shadow: 0 0 10px currentColor;
+  }
+  
+  /* Neon Text Effects */
+  .neon-text {
+    @apply text-primary;
+    text-shadow: 
+      0 0 5px currentColor,
+      0 0 10px currentColor,
+      0 0 15px currentColor;
+  }
+  
+  .neon-green {
+    @apply text-accent;
+    text-shadow: 
+      0 0 5px hsl(var(--accent)),
+      0 0 10px hsl(var(--accent));
+  }
+  
+  .neon-amber {
+    color: hsl(var(--amber-accent));
+    text-shadow: 
+      0 0 5px hsl(var(--amber-accent)),
+      0 0 10px hsl(var(--amber-accent));
+  }
+  
+  /* Status Indicators */
+  .status-online { @apply text-accent; }
+  .status-busy { @apply text-amber-accent; }
+  .status-offline { @apply text-muted-foreground; }
+  
+  /* Hover Effects */
+  .terminal-hover {
+    @apply transition-all duration-200;
+  }
+  
+  .terminal-hover:hover {
+    @apply bg-primary/10 border-primary/50;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+  }
+}
+
+@layer utilities {
+  .text-cyber {
+    background: linear-gradient(45deg, hsl(var(--cyan-primary)), hsl(var(--green-terminal)));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+/* Animations */
+@keyframes subtle-flicker {
+  0% { opacity: 1; }
+  100% { opacity: 0.98; }
+}
+
+@keyframes terminal-blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+.cursor-blink::after {
+  content: "█";
+  @apply text-primary;
+  animation: terminal-blink 1s infinite;
 }
 
 @layer base {

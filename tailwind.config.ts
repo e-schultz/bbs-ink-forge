@@ -18,6 +18,9 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				mono: ['SF Mono', 'Monaco', 'Cascadia Code', 'Roboto Mono', 'monospace'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -52,16 +55,20 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				sidebar: {
-					DEFAULT: 'hsl(var(--sidebar-background))',
-					foreground: 'hsl(var(--sidebar-foreground))',
-					primary: 'hsl(var(--sidebar-primary))',
-					'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
-					accent: 'hsl(var(--sidebar-accent))',
-					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
-					border: 'hsl(var(--sidebar-border))',
-					ring: 'hsl(var(--sidebar-ring))'
-				}
+				// Terminal/BBS specific colors
+				'terminal-bg': 'hsl(var(--terminal-bg))',
+				'terminal-surface': 'hsl(var(--terminal-surface))',
+				'terminal-elevated': 'hsl(var(--terminal-elevated))',
+				'terminal-text': 'hsl(var(--terminal-text))',
+				'terminal-text-dim': 'hsl(var(--terminal-text-dim))',
+				'terminal-text-bright': 'hsl(var(--terminal-text-bright))',
+				'cyan-primary': 'hsl(var(--cyan-primary))',
+				'cyan-secondary': 'hsl(var(--cyan-secondary))',
+				'green-terminal': 'hsl(var(--green-terminal))',
+				'amber-accent': 'hsl(var(--amber-accent))',
+				'magenta-error': 'hsl(var(--magenta-error))',
+				'terminal-border': 'hsl(var(--terminal-border))',
+				'terminal-glow': 'hsl(var(--terminal-glow))',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
