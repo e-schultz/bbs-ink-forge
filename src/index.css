@@ -154,6 +154,33 @@
   }
 }
 
+/* Conversation archaeology styles */
+.conversation-thread {
+  position: relative;
+}
+
+.conversation-thread::before {
+  content: "└─";
+  position: absolute;
+  left: -0.75rem;
+  top: 0.5rem;
+  color: hsl(var(--terminal-border));
+  font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', monospace;
+  font-size: 0.75rem;
+}
+
+.quote-reference {
+  border-left-width: 3px;
+}
+
+.archaeology-trace {
+  position: relative;
+}
+
+.release-thread:hover .archaeology-trace {
+  background: rgba(0, 255, 65, 0.02);
+}
+
 /* Animations */
 @keyframes subtle-flicker {
   0% { opacity: 1; }
