@@ -1,73 +1,184 @@
-# Welcome to your Lovable project
+---
+title: BBS Publishing Collective
+description: Terminal-inspired publishing hub with BBS aesthetics, AI agents, and collaborative tools
+created: 2024-01-01
+updated: 2025-08-19
+status: active
+type: microsite
+project: float-workspace
+repository: bbs-ink-forge
+url: https://float-line-collective.ritualstack.ai/
+lovable_url: https://lovable.dev/projects/952821e2-a53a-4e32-ae4d-fd612c405b2f
+themes:
+  - terminal_aesthetics
+  - bbs_nostalgia
+  - underground_publishing
+  - consciousness_technology
+  - collaborative_creation
+  - ai_integration
+concepts:
+  - conversation_archaeology
+  - thread_genesis
+  - memory_preservation
+  - distributed_storytelling
+  - bot_civilizations
+  - terminal_dreams
+technologies:
+  - react
+  - typescript
+  - vite
+  - shadcn-ui
+  - tailwindcss
+  - tanstack-query
+features:
+  - recent_releases
+  - llm_liaison
+  - door_games
+  - group_chat
+  - browse_collections
+  - workspace_tools
+personas:
+  - void_walker
+  - neo_scribe
+  - data_ghost
+  - Archive-Mind
+  - ResearchBot
+  - signal_ghost
+imprints:
+  - Terminal Dreams
+  - Code & Chaos
+  - Midnight Transmissions
+tags:
+  - #float-workspace
+  - #bbs-revival
+  - #terminal-ui
+  - #publishing-collective
+  - #consciousness-tech
+---
 
-## Project info
+# BBS Publishing Collective
 
-**URL**: https://lovable.dev/projects/952821e2-a53a-4e32-ae4d-fd612c405b2f
+A terminal-inspired publishing hub with BBS aesthetics, featuring recent releases, AI agents, door games, and real-time chat.
 
-## How can I edit this code?
+![BBS Publishing Collective Interface](./public/og-image.png)
 
-There are several ways of editing your application.
+## About
 
-**Use Lovable**
+The BBS Publishing Collective is a modern reimagining of classic Bulletin Board Systems, designed for the underground publishing ecosystem. It combines retro terminal aesthetics with contemporary web technologies to create an immersive publishing platform.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/952821e2-a53a-4e32-ae4d-fd612c405b2f) and start prompting.
+### Features
 
-Changes made via Lovable will be committed automatically to this repo.
+- **Recent Releases**: Track publications with conversation archaeology and thread genesis
+- **LLM Liaison**: AI agent integration for specialized tasks (Archive-Mind, ResearchBot)
+- **Door Games**: Interactive terminal games and collaborative story creation
+- **Group Chat**: Real-time messaging with online user tracking
+- **Browse Section**: Curated collections and archives
+- **My Workspace**: Personal publishing tools and drafts
 
-**Use your preferred IDE**
+## Tech Stack
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+- **Frontend**: React 18 + TypeScript
+- **Build Tool**: Vite
+- **UI Components**: shadcn/ui with Radix UI
+- **Styling**: Tailwind CSS with custom terminal theme
+- **State Management**: TanStack Query
+- **Routing**: React Router v6
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## Getting Started
 
-Follow these steps:
+### Prerequisites
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
+- Node.js & npm ([install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating))
+- Git
+
+### Installation
+
+```bash
+# Clone the repository
 git clone <YOUR_GIT_URL>
+cd bbs-ink-forge
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+# Install dependencies
+npm install
 
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Start development server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+The application will be available at `http://localhost:8080`
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Available Scripts
 
-**Use GitHub Codespaces**
+```bash
+npm run dev        # Start development server
+npm run build      # Build for production
+npm run lint       # Run ESLint
+npm run preview    # Preview production build
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Design System
 
-## What technologies are used for this project?
+The BBS aesthetic features:
+- Cyan primary colors with neon glow effects
+- Scan line animations and subtle flicker
+- Terminal window components with headers
+- Monospace typography (SF Mono, Monaco, Cascadia Code)
+- Conversation archaeology tracking for all content
 
-This project is built with:
+## Project Structure
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+```
+src/
+├── components/       # Feature components
+│   ├── ui/          # shadcn/ui base components
+│   ├── BBSHeader.tsx
+│   ├── RecentReleases.tsx
+│   ├── LLMLiaison.tsx
+│   └── ...
+├── pages/           # Route pages
+├── hooks/           # Custom React hooks
+└── lib/            # Utilities
+```
 
-## How can I deploy this project?
+## Conversation Archaeology
 
-Simply open [Lovable](https://lovable.dev/projects/952821e2-a53a-4e32-ae4d-fd612c405b2f) and click on Share -> Publish.
+Each publication includes metadata tracking its origin:
+- **Thread Genesis**: Evolution of ideas from conversation to publication
+- **Conversation Traces**: Timestamped collaborative development
+- **Contributors**: Active participants in creation
 
-## Can I connect a custom domain to my Lovable project?
+Example archaeology pattern:
+```
+threadGenesis: "BBS nostalgia → modern implementation → consciousness archaeology"
+conversationTrace: [
+  "12:34 void_walker: working on glitch aesthetics",
+  "12:35 neo_scribe: Terminal Dreams #2 memory zones",
+  "12:40 Editor-7745: structure analysis complete"
+]
+contributors: ["void_collective", "neo_scribe", "data_ghost"]
+```
 
-Yes, you can!
+## Deployment
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+### Via Lovable Platform
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+Simply open [Lovable](https://lovable.dev/projects/952821e2-a53a-4e32-ae4d-fd612c405b2f) and click on Share → Publish.
+
+### Custom Domain
+
+To connect a custom domain:
+1. Navigate to Project > Settings > Domains
+2. Click Connect Domain
+3. Follow the [setup guide](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+
+## Contributing
+
+The BBS Publishing Collective welcomes contributions from the underground publishing community. Feel free to submit issues and pull requests.
+
+## License
+
+Part of the FLOAT workspace ecosystem • Est. 2024
+
+---
+
+*"Welcome to the underground publishing ecosystem"*
